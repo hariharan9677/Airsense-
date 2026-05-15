@@ -342,7 +342,7 @@ st.markdown("""
 @st.cache_resource
 def load_model_and_data():
     try:
-        df = pd.read_csv(r"C:\Users\acer\Desktop\project weather ass\air.csv")
+        df = pd.read_csv(r"air.csv")
         df.columns = df.columns.str.strip()
         num_cols = df.select_dtypes(include=[np.number]).columns.tolist()
         df[num_cols] = df[num_cols].fillna(df[num_cols].mean())
